@@ -4,10 +4,6 @@ textarea {
   height: 70vh;
 }
 
-article {
-  margin-bottom: 9px;
-}
-
 h1 {
   margin-bottom: 6px;
 }
@@ -23,5 +19,4 @@ input[type="button"],
 input[type="submit"],
 .input-checkbox {
   -webkit-appearance: none;
-  border-radius: 0;
 }
