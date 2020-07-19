@@ -1,0 +1,32 @@
+{
+  "name": "@spacebin-org/pulsar",
+  "version": "0.0.0",
+  "description": "light-weight spacebin web client",
+  "main": "src/server.js",
+  "repository": "git@github.com:spacebin-org/pulsar",
+  "author": "Luke Whrit <lukewhrit@gmail.com>",
+  "license": "BSD-3-Clause-Clear",
+  "private": true,
+  "scripts": {
+    "dev": "yarn nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "got": "^11.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.2.0",
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
