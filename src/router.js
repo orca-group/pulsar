@@ -41,8 +41,6 @@ router.post('/upload', upload.none(), validatePost(), async (req, res) => {
       }
     }).json()
 
-    console.log(response)
-
     if (response.error !== {}) {
       res.redirect(`/${response.payload.id}`)
     } else {
@@ -51,8 +49,6 @@ router.post('/upload', upload.none(), validatePost(), async (req, res) => {
       })
     }
   } catch (err) {
-    console.log(err)
-
     res.status(400).send({
       message: err
     })
