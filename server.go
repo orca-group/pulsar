@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	"github.com/gofiber/cors"
 	"github.com/gofiber/fiber"
 	"github.com/gofiber/fiber/middleware"
@@ -9,6 +11,10 @@ import (
 )
 
 func main() {
+	if err := config.Load(); err != nil {
+		log.Fatalf("error loading config from json: %s", err.Error())
+	}
+
 	app := fiber.New(&fiber.Settings{
 		Views: html.New("./views", ".html"),
 	})

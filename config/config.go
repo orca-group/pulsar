@@ -15,8 +15,8 @@ var k = koanf.New(".")
 type Config struct {
 	Port             int    `koanf:"port"`
 	Host             string `koanf:"host"`
-	CompressionLevel int    `koanf:"compression_level"`
-	EnableCSP        bool   `koanf:"enable_csp"`
+	CompressionLevel int    `koanf:"compressionLevel"`
+	EnableCSP        bool   `koanf:"enableCSP"`
 	Instance         string `koanf:"instance"`
 }
 
