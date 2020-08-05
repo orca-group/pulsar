@@ -11,17 +11,13 @@ import (
 
 var k = koanf.New(".")
 
-// Server is the configuration object for anything server-related
-type Server struct {
-	Port             int
-	Host             string
-	CompressionLevel int
-	EnableCSP        bool
-}
-
 // Config is the configuration object
 type Config struct {
-	Server
+	Port             int    `koanf:"port"`
+	Host             string `koanf:"host"`
+	CompressionLevel int    `koanf:"compression_level"`
+	EnableCSP        bool   `koanf:"enable_csp"`
+	Instance         string `koanf:"instance"`
 }
 
 var configuration Config
@@ -30,10 +26,11 @@ var configuration Config
 func Load() error {
 	// Set some default values
 	k.Load(confmap.Provider(map[string]interface{}{
-		"Server.Port":             3000,
-		"Server.Host":             "0.0.0.0",
-		"Server.CompressionLevel": -1,
-		"Server.EnableCSP":        true,
+		"port":              3000,
+		"host":              "0.0.0.0",
+		"compression_level": -1,
+		"enable_csp":        true,
+		"instance":          "https://api.spaceb.in",
 	}, "."), nil)
 
 	f := file.Provider("./config.json")
