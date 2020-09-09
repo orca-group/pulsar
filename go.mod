@@ -3,7 +3,7 @@ module github.com/spacebin-org/pulsar
 go 1.14
 
 require (
-	github.com/GreatGodApollo/gospacebin v0.4.0
+	github.com/GreatGodApollo/gospacebin v0.6.0
 	github.com/gofiber/cors v0.2.2
 	github.com/gofiber/fiber v1.13.3
 	github.com/gofiber/template v1.5.5
