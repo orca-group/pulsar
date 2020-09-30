@@ -10,7 +10,7 @@ func Build() error {
 		return err
 	}
 
-	return sh.Run("go", "build", "--ldflags", "-s -w", "./")
+	return sh.Run("go", "build", "-o", "bin/pulsar", "--ldflags", "-s -w", "./")
 }
 
 // Format lints and fixes all files in the directory
@@ -26,5 +26,5 @@ func Run() error {
 		return err
 	}
 
-	return sh.RunV("./pulsar")
+	return sh.RunV("./bin/pulsar")
 }
