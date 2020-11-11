@@ -1,7 +1,0 @@
-{
-	"port": 9100,
-	"host": "0.0.0.0",
-	"compression_level": -1,
-	"enable_csp": true,
-	"instance": "https://api.spaceb.in/"
-}
