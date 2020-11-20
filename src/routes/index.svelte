@@ -2,20 +2,21 @@
   import { onMount } from 'svelte'
 
   onMount(() => {
-      document.querySelector('textarea').addEventListener('keydown', function (e) {
-        if (e.key.toLowerCase() === 'tab') {
-          e.preventDefault()
+    // Fix tab key in textarea
+    document.querySelector('textarea').addEventListener('keydown', function (e) {
+      if (e.key.toLowerCase() === 'tab') {
+        e.preventDefault()
 
-          const start = this.selectionStart
-          const end = this.selectionEnd
+        const start = this.selectionStart
+        const end = this.selectionEnd
 
-          // set textarea value to: text before caret + tab + text after caret
-          this.value = this.value.substring(0, start) +
-            "\t" + this.value.substring(end)
+        // Set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) +
+          "\t" + this.value.substring(end)
 
-          // move caret to right position
-          this.selectionStart = this.selectionEnd = start + 1;
-        }
+        // Move caret to right position
+        this.selectionStart = this.selectionEnd = start + 1;
+      }
     })
   })
 </script>

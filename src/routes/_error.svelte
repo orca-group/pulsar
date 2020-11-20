@@ -13,7 +13,11 @@
   h1 {
     font-size: 2.8em;
     font-weight: 700;
-    margin: 0 0 0.5em 0;
+    margin: 0;
+  }
+
+  a {
+    color: #91AADF;
   }
 
   p {
@@ -31,10 +35,16 @@
   <title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1>Error {status}</h1>
 
 <p>{error.message}</p>
 
 {#if dev && error.stack}
   <pre>{error.stack}</pre>
 {/if}
+
+<h3>
+  Get help for this error in
+    <a href="https://discord.gg/zsxwgYc">Discord</a> or report it on
+    <a href="https://github.com/spacebin-org/pulsar">Github</a>
+</h3>
