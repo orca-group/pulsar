@@ -31,10 +31,6 @@
   }
 </style>
 
-<svelte:head>
-  <title>{status}</title>
-</svelte:head>
-
 <h1>Error {status}</h1>
 
 <p>{error.message}</p>
@@ -46,5 +42,5 @@
 <h3>
   Get help for this error in
     <a href="https://discord.gg/zsxwgYc">Discord</a> or report it on
-    <a href="https://github.com/spacebin-org/pulsar">Github</a>
+    <a href="https://github.com/spacebin-org/pulsar">Github</a>.
 </h3>
