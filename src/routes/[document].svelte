@@ -3,7 +3,7 @@
     const { document: slug } = page.params
 
     const resp: Response = await this.fetch(
-      `http://127.0.0.1:9000/api/v1/documents/${slug}`
+      `http://api.spaceb.in/api/v1/documents/${slug}`
     )
 
     const code = await resp.json()
