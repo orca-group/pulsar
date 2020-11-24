@@ -2,33 +2,25 @@
   --font-family: "Fira Mono", "Source Code Pro", "Inconsolata", "Fira Code", "Consolas", "Menlo", "Monaco", monospace;
   --font-size: 17px;
 
-  --color-light-gray: #454545;
-  --color-yellow: #F0D50C;
-  --color-lime: #D8FA3B;
-  --color-blue: #91AADF;
-  --color-light-blue: #B7CBF4;
-  --color-red: #821A1A;
-  --color-purple: #CF73E6;
-  --color-orange: #F66100;
-  --color-green: #57BA37;
-  --color-white: #DEDEDE;
-  --color-black: #121212;
-  --color-gray: #272727;
+  --color-line-numbers: #454545;
+  --color-links: #91AADF;
+  --color-foreground: #DEDEDE;
+  --color-background: #121212;
 }
 
 body {
-  background: var(--color-black);
+  background: var(--color-background);
   padding: 20px 50px;
   margin: 0;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  color: var(--color-white);
+  color: var(--color-foreground);
 }
 
 textarea {
   background: transparent;
   border: none;
-  color: var(--color-white);
+  color: var(--color-foreground);
   padding: 0;
   width: 100%;
   height: 93.5vh;
@@ -40,7 +32,7 @@ textarea {
 }
 
 #line-numbers {
-  color: var(--color-light-gray);
+  color: var(--color-line-numbers);
   z-index: -1000;
   position: absolute;
   top: 20px;
@@ -68,7 +60,7 @@ button {
   padding: 0;
   margin: 0;
   border: none;
-  color: var(--color-blue);
+  color: var(--color-links);
   font-size: var(--font-size);
 }
 
