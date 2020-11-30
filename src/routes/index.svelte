@@ -64,5 +64,5 @@
     </div>
   </div>
 
-  <textarea spellcheck="false"></textarea>
+  <textarea spellcheck={false}></textarea>
 </main>
