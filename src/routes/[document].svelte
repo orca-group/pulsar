@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
-  export async function preload(page) {
+  export async function preload(page, session) {
+    const { PULSAR_INSTANCE } = session
     const { document: slug } = page.params
 
     if (slug.length !== 8) {
@@ -9,7 +10,7 @@
     }
 
     const resp: Response = await this.fetch(
-      `https://api.spaceb.in/api/v1/documents/${slug}`
+      `${PULSAR_INSTANCE}/api/v1/documents/${slug}`
     )
     const code = await resp.json()
 

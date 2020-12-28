@@ -1,6 +1,9 @@
 <script lang="ts">
-  import { goto } from '@sapper/app'
+  import { goto, stores } from '@sapper/app'
   import { onMount } from 'svelte'
+
+  const { session } = stores()
+  const { PULSAR_INSTANCE } = $session
 
   onMount(() => {
     // Fix tab key in textarea
@@ -27,7 +30,7 @@
 
       if (textarea.value !== "") {
         const resp: Response = await window.fetch(
-          `https://api.spaceb.in/api/v1/documents/`,
+          `${PULSAR_INSTANCE}/api/v1/documents/`,
           {
             method: 'POST',
             body: JSON.stringify({
