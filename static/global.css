@@ -5,6 +5,7 @@
 
   --color-line-numbers: #454545;
   --color-links: #91aadf;
+  --color-links-dark: #7a98d8;
   --color-foreground: #dedede;
   --color-background: #121212;
 }
@@ -79,10 +80,11 @@ button, a {
   border: none;
   color: var(--color-links);
   font-size: var(--font-size);
+  cursor: pointer;
 }
 
 button:hover, button:focus, a:hover, a:focus {
-  cursor: pointer;
+  color: var(--color-links-dark);
 }
 
 img {
