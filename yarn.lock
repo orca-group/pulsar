@@ -1353,9 +1353,11 @@ __metadata:
     "@types/compression": ^1.7.0
     "@types/node": ^14.11.1
     "@types/polka": ^0.5.1
+    "@types/prismjs": ^1.16.5
     compression: ^1.7.1
     cz-conventional-changelog: 3.3.0
     polka: next
+    prismjs: ^1.23.0
     rollup: ^2.3.4
     rollup-plugin-svelte: ^6.0.0
     rollup-plugin-terser: ^7.0.0
@@ -1478,6 +1480,13 @@ __metadata:
     "@types/node": "*"
     "@types/trouter": "*"
   checksum: cc594467910ab76730a0a7306914a8794fabae7b3fd15b10e3ca46244c46a3edd3197feb2c00ed093521c68b6fc1df8cf5f5db5e39c3faeec45b8e97a0732492
+  languageName: node
+  linkType: hard
+
+"@types/prismjs@npm:^1.16.5":
+  version: 1.16.5
+  resolution: "@types/prismjs@npm:1.16.5"
+  checksum: d1588de566078442cc8ae05aab5d3a020ab0a55492bfa5307a2e397d3c2139ee40b0399a67bd17cde902e2ff98d3d11080f0f1b6c4ee4beebe5a3d2f8e4fd282
   languageName: node
   linkType: hard
 
@@ -1993,6 +2002,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clipboard@npm:^2.0.0":
+  version: 2.0.8
+  resolution: "clipboard@npm:2.0.8"
+  dependencies:
+    good-listener: ^1.2.2
+    select: ^1.1.2
+    tiny-emitter: ^2.0.0
+  checksum: 8eab011ad8cf2dc794b717483f913550c1be1298c84550917f99734b8c5d6674ab86fe6c074234a9597bf60efddffa2ca11ce0df0f78f7c64c4e6a64302437f8
+  languageName: node
+  linkType: hard
+
 "code-point-at@npm:^1.0.0":
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
@@ -2300,6 +2320,13 @@ __metadata:
     is-descriptor: ^1.0.2
     isobject: ^3.0.1
   checksum: 00c7ec53b5040507016736922a9678b3247bc85e0ea0429e47d6ca6a993890f9dc338fb19d5bf6f8c0ca29016a68aa7e7da5c35d4ed8b3646347d86a3b2b4b01
+  languageName: node
+  linkType: hard
+
+"delegate@npm:^3.1.2":
+  version: 3.2.0
+  resolution: "delegate@npm:3.2.0"
+  checksum: ccbbf29eb436719e4ffef06a1df2635a150f229f8ae549f4b6e118e940b17917e063c939541c6e23f38675d30acf424ecca9a8d1cca2a874d63fa0c257b0811f
   languageName: node
   linkType: hard
 
@@ -2717,6 +2744,15 @@ fsevents@~2.1.2:
   version: 11.12.0
   resolution: "globals@npm:11.12.0"
   checksum: 2563d3306a7e646fd9ec484b0ca29bf8847d9dc6ebbe86026f11e31bda04f420f6536c2decbd4cb96350379801d2cce352ab373c40be8b024324775b31f882f9
+  languageName: node
+  linkType: hard
+
+"good-listener@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "good-listener@npm:1.2.2"
+  dependencies:
+    delegate: ^3.1.2
+  checksum: 640a1627e528ceb3337595a8020f44d09455f284c18c765eaf9ce5dcdf1799810e7b11ca2b61582a5a4db20aad0b7e6b820235864822d84df541d74383bcd01c
   languageName: node
   linkType: hard
 
@@ -3917,6 +3953,18 @@ polka@next:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.23.0":
+  version: 1.23.0
+  resolution: "prismjs@npm:1.23.0"
+  dependencies:
+    clipboard: ^2.0.0
+  dependenciesMeta:
+    clipboard:
+      optional: true
+  checksum: 9d55785f1ea68e2a2e6b0a5ea1241811ed986182af76053ecf50245521414597d70b17dc5804a7ad961dfd459e6883a89ad3f86bb064ac3484e3ef24b7891f4f
+  languageName: node
+  linkType: hard
+
 "process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -4290,6 +4338,13 @@ polka@next:
   bin:
     sapper: sapper
   checksum: fd5ab59b11d6d18da46f3aedad5d8cb5faf522f64963a0858e75df342f759f0640ad696438925170426921a3f2d95f5d90fe3dd80fece0679fc45fd381547793
+  languageName: node
+  linkType: hard
+
+"select@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "select@npm:1.1.2"
+  checksum: 66be63b7cf0973af48cebcca47909d0ba703bb7f01373f9ebf19880dc8fe9c97f41e2ebdefee144f60bbf416cafbf77dfb98cd1776e62d7afc336b843f1009b1
   languageName: node
   linkType: hard
 
@@ -4746,6 +4801,13 @@ polka@next:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: 918d9151680b5355990011eb8c4b02e8cb8cf6e9fb6ea3d3e5a1faa688343789e261634ae35de4ea9167ab029d1e7bac6af2fe61b843931768d405fdc3e8897c
+  languageName: node
+  linkType: hard
+
+"tiny-emitter@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "tiny-emitter@npm:2.1.0"
+  checksum: 0055509c72e5fe35d6ab66fa6339342e0f29129e77ed2086e475fdf80be43a8651f2517be76513b46a042c8356396f4da5a35e2e23457252176808d5a892036a
   languageName: node
   linkType: hard
 

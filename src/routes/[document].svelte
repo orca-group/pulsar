@@ -25,9 +25,15 @@
 </script>
 
 <script lang="ts">
+  import Prism from 'prismjs';
+
   export let code
   export let lines
 </script>
+
+<svelte:head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" />
+</svelte:head>
 
 <header>
   <img src="/logo.svg" alt="Spacebin Logo">
@@ -56,5 +62,5 @@
     {/each}
   </div>
 
-  <pre><code>{code}</code></pre>
+  <pre><code>{@html Prism.highlight(code, Prism.languages.markup, 'markup')}</code></pre>
 </main>

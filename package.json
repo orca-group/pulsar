@@ -12,6 +12,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
+    "prismjs": "^1.23.0",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "@types/compression": "^1.7.0",
     "@types/node": "^14.11.1",
     "@types/polka": "^0.5.1",
+    "@types/prismjs": "^1.16.5",
     "cz-conventional-changelog": "3.3.0",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^6.0.0",
