@@ -9,9 +9,7 @@
       )
     }
 
-    const resp: Response = await this.fetch(
-      `${PULSAR_INSTANCE}/api/v1/documents/${slug}`
-    )
+    const resp: Response = await this.fetch(`${PULSAR_INSTANCE}/v1/documents/${slug}`)
     const code = await resp.json()
 
     if (resp.status === 500 || 404 && code.error === 'record not found') {
@@ -20,20 +18,21 @@
 
     const lines = code.payload.content.split('\n')
 
-    return { code: code.payload.content, lines }
+    return {
+      code: code.payload.content,
+      extension: code.payload.extension,
+      lines,
+    }
   }
 </script>
 
 <script lang="ts">
   import Prism from 'prismjs';
 
-  export let code
-  export let lines
+  export let code: string;
+  export let lines: string[];
+  export let extension: string;
 </script>
-
-<svelte:head>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" />
-</svelte:head>
 
 <header>
   <img src="/logo.svg" alt="Spacebin Logo">
@@ -62,5 +61,11 @@
     {/each}
   </div>
 
-  <pre><code>{@html Prism.highlight(code, Prism.languages.markup, 'markup')}</code></pre>
+  <pre><code>
+    {#if extension in Prism.languages}
+      {@html Prism.highlight(code, Prism.languages[extension], extension)}
+    {:else}
+      {code}
+    {/if}
+  </code></pre>
 </main>

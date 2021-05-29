@@ -30,12 +30,12 @@
 
       if (textarea.value !== "") {
         const resp: Response = await window.fetch(
-          `${PULSAR_INSTANCE}/api/v1/documents/`,
+          `${PULSAR_INSTANCE}/v1/documents/`,
           {
             method: 'POST',
             body: JSON.stringify({
               content: textarea.value,
-              extension: 'txt'
+              extension: 'none'
             }),
             headers: {
               'Content-Type': 'application/json'
