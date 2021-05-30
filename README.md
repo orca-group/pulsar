@@ -32,10 +32,26 @@ If you're looking to contribute to Pulsar, great! We'd love new contributors. We
 ```sh
 # Pull and run docker image on port 80 using official Spirit instance
 $ sudo docker pull spacebinorg/pulsar:latest
-$ sudo docker run -d -p 80:3000 spacebinorg/pulsar:latest -e PULSAR_INSTANCE='https://spaceb.in/api'
+$ sudo docker run -d \
+  --restart=always \
+  -e PULSAR_API_INSTANCE='https://spaceb.in/api' \
+  -e PULSAR_PORT='3000' \
+  -e PULSAR_HOST='0.0.0.0' \
+  -p 80:3000 \
+  spacebinorg/pulsar:latest 
 ```
 
 More in-depth instructions are available on the [Spacebin Wiki](https://docs.spaceb.in).
+
+### 📚 Environment Variables
+
+Pulsar configuration is done via numerous environment variables. Below is a list of all environment variables Pulsar will accept:
+
+* `PULSAR_HOST` controls the hostname on which Pulsar serves. Default: `0.0.0.0`
+* `PULSAR_PORT` controls the port on which Pulsar serves. Default: `3000`
+* `PULSAR_API_INSTANCE` dictates the Spirit instance which Pulsar will use. Default: `https://spaceb.in/api`
+
+Any required environment variables are bolded.
 
 ## 👥 Contributors
 
