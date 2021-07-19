@@ -55,11 +55,11 @@ Any required environment variables are bolded.
 
 ## 👥 Contributors
 
-Pulsar development is lead by [Luke Whrit](https://github.com/lukewhrit), other team members, and various contributors from the open source community.
+Pulsar development is lead by [Ava Whrit](https://github.com/avaaxcx), other team members, and various contributors from the open source community.
 
 Here's a list of notable contributors to Pulsar:
 
-* [Luke Whrit <lukewhrit@pm.me>](https://github.com/lukewhrit) - Primary developer and maintainer.
+* [Ava Whrit <lukewhrit@pm.me>](https://github.com/avaaxcx) - Primary developer and maintainer.
 
 ## 👮 Vulnerabilities
 
