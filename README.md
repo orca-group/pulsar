@@ -6,17 +6,16 @@
   />
 </p>
 
-> **🔭 Pulsar is a light-weight and simple web client for Spacebin.**
-> \
+> **🔭 Pulsar is a light-weight and simple web client for Spacebin.** > \
 > \
 > [**🌎 View Live**](https://spaceb.in) | [**🚀 More Information**](https://github.com/spacebin-org/spacebin#readme)
-> 
+
 ---
 
 ## Self-hosting
 
 Instructions in progress...
 
-## License 
+## License
 
 Like most other projects by the Spacebin team, Pulsar is licensed under the BSD 3-Clause "Clear" license. A copy of this license can be found in the [`LICENSE.md`](LICENSE.md) file.
