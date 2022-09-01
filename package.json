@@ -5,7 +5,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-    "start": "vite build && node build/index.js",
+		"start": "vite build && node build/index.js",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
@@ -28,6 +28,5 @@
 		"typescript": "^4.7.4",
 		"vite": "^3.1.0-beta.1"
 	},
-	"type": "module",
-	"dependencies": {}
+	"type": "module"
 }
