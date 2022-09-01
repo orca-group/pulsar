@@ -89,8 +89,8 @@ typings/
 
 # dotenv environment variables file
 .env
-.env.test
-.env*.local
+.env.*
+!.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -114,6 +114,11 @@ dist
 
 # vuepress build output
 .vuepress/dist
+
+# sveltekit
+/build
+.svelte-kit
+/package
 
 # Serverless directories
 .serverless/
