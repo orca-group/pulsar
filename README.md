@@ -16,7 +16,7 @@
 
 **Requires: Docker**
 
-```
+```sh
 # Pull and run Docker image on port 80
 $ sudo docker pull spacebinorg/pulsar:latest
 $ sudo docker run -d -p 80:3000 -e PULSAR_INSTANCE="https://spaceb.in/api/v1" spacebinorg/pulsar:latest
