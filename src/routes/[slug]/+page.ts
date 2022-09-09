@@ -1,10 +1,10 @@
-import { PULSAR_INSTANCE } from '$env/static/public';
 import { error } from '@sveltejs/kit';
+// eslint-disable-next-line import/extensions
+import { PULSAR_INSTANCE } from '$env/static/public';
 
 /** @type {import('./$types').PageLoad} */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function load({ params, fetch }) {
-  const slug = params.slug;
+  const { slug } = params;
 
   if (slug.length !== 8) {
     throw error(400, `Document ID is not long enough; is ${slug.length}, must be 8`);

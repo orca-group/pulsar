@@ -7,6 +7,7 @@
   --color-line-numbers: #454545;
   --color-links: #91aadf;
   --color-links-dark: #728ec9;
+
   --color-foreground: #dedede;
   --color-background: #121212;
 }
@@ -49,6 +50,7 @@ header {
   height: 36px;
   user-select: none;
   display: block;
+  user-select: none;
   margin-bottom: 4px;
 }
 

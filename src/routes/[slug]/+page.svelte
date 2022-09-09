@@ -11,15 +11,18 @@
   };
 
   // Browsers disable the copy feature if not on HTTPS. This facilitates a check for that.
-  onMount(() => secure = window.isSecureContext);
+  onMount(() => (secure = window.isSecureContext));
 
   function copy() {
-    navigator.clipboard.writeText(data.code)
+    navigator.clipboard
+      .writeText(data.code)
       .then(() => {
         showCopy = true;
-        setTimeout(() => showCopy = false, 1200);
+        setTimeout(() => (showCopy = false), 1200);
       })
-      .catch(err => { throw error(err) });
+      .catch((err) => {
+        throw error(err);
+      });
   }
 </script>
 
@@ -92,9 +95,7 @@
       </svg>
     </button>
     {#if showCopy}
-    <span id="copy-text">
-      Copied!
-    </span>
+      <span id="copy-text"> Copied! </span>
     {/if}
   {/if}
 </header>

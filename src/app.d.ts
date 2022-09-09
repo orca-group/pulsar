@@ -2,11 +2,12 @@
 // for information about these interfaces
 // and what to do when importing types
 declare namespace App {
-	// interface Locals {}
-	// interface PageData {}
-	// interface Platform {}
+  // interface Locals {}
+  // interface PageData {}
+  // interface Platform {}
 }
 
 declare module '$env/static/public' {
-	export const PULSAR_INSTANCE: string;
+  export const PULSAR_INSTANCE: string;
+  export const PULSAR_ID_LENGTH: string;
 }

@@ -3,24 +3,6 @@
   import { goto } from '$app/navigation';
   import { PULSAR_INSTANCE } from '$env/static/public';
 
-  onMount(() => {
-    // Fix tab key in textarea
-    document.querySelector('textarea')?.addEventListener('keydown', function (e) {
-      if (e.key.toLowerCase() === 'tab') {
-        e.preventDefault();
-
-        const start = this.selectionStart;
-        const end = this.selectionEnd;
-
-        // Set textarea value to: text before caret + tab + text after caret
-        this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
-
-        // Move caret to right position
-        this.selectionStart = this.selectionEnd = start + 1;
-      }
-    });
-  });
-
   async function upload() {
     const textarea = document.querySelector('textarea');
 
@@ -43,6 +25,49 @@
       }
     }
   }
+
+  onMount(() => {
+    // Fix tab key in textarea
+    document.querySelector('textarea')?.addEventListener('keydown', function (e) {
+      if (e.key.toLowerCase() === 'tab') {
+        e.preventDefault();
+
+        const start = this.selectionStart;
+        const end = this.selectionEnd;
+
+        // Set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
+
+        // Move caret to right position
+        this.selectionStart = this.selectionEnd = start + 1;
+      }
+    });
+
+    const saveButton = document.querySelector('button#save');
+
+    saveButton?.addEventListener('click', async function (e) {
+      const textarea = document.querySelector('textarea');
+
+      if (textarea?.value !== '') {
+        const resp: Response = await window.fetch(`${PULSAR_INSTANCE}/documents/`, {
+          method: 'POST',
+          body: JSON.stringify({
+            content: textarea?.value,
+            extension: 'txt',
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        const body = await resp.json();
+
+        if (resp.status === 201 && body.payload.id) {
+          await goto(`/${body.payload.id}`);
+        }
+      }
+    });
+  });
 </script>
 
 <header>
