@@ -1,7 +1,7 @@
 <script lang="ts">
   import Book from '$lib/components/icons/Book.svelte';
-import Home from '$lib/components/icons/Home.svelte';
-import Octocat from '$lib/components/icons/Octocat.svelte';
+  import Home from '$lib/components/icons/Home.svelte';
+  import Octocat from '$lib/components/icons/Octocat.svelte';
   import Spacebin from '$lib/components/icons/Spacebin.svelte';
 
   interface Data {
