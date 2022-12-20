@@ -6,13 +6,25 @@
   />
 </p>
 
-> **🔭 Pulsar is a light-weight and simple web client for Spacebin.** \
-> \
-> [**🌎 View Live**](https://spaceb.in) | [**🚀 More Information**](https://github.com/spacebin-org/spacebin#readme)
+# 🔭 Pulsar
 
----
+Pulsar is a simplistic, light-weight web client for Spacebin: text sharing for the final frontier. Check out our [public hosted instance](https://spaceb.in) or read more about [Spacebin](https://docs.spaceb.in).
 
-## Self-hosting
+## Table of Contents
+
+- [🔭 Pulsar](#-pulsar)
+  - [Table of Contents](#table-of-contents)
+  - [Documentation](#documentation)
+    - [Self-hosting](#self-hosting)
+    - [Configuration](#configuration)
+    - [Other Environment Variables](#other-environment-variables)
+  - [Code Style](#code-style)
+    - [Commits](#commits)
+  - [License](#license)
+
+## Documentation
+
+### Self-hosting
 
 **Requires: Docker**
 
@@ -22,7 +34,7 @@ $ sudo docker pull spacebinorg/pulsar:latest
 $ sudo docker run -d -p 80:3000 -e PULSAR_INSTANCE="https://spaceb.in/api/v1" spacebinorg/pulsar:latest
 ```
 
-### `PULSAR_INSTANCE` Environment Variable
+### Configuration
 
 This variable dictates what API server Pulsar uses. Make sure you provide the entire URL, including the `/api/v1` section. **DO NOT** include a trailing backslash.
 
