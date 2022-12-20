@@ -2,6 +2,10 @@
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import { PULSAR_INSTANCE } from '$env/static/public';
+  import Book from '$lib/components/icons/Book.svelte';
+  import Octocat from '$lib/components/icons/Octocat.svelte';
+  import Save from '$lib/components/icons/Save.svelte';
+  import Spacebin from '$lib/components/icons/Spacebin.svelte';
 
   onMount(() => {
     // Fix tab key in textarea
@@ -48,56 +52,15 @@
 </script>
 
 <header>
-  <img src="/logo.svg" alt="Spacebin Logo" />
+  <Spacebin />
   <button id="save" aria-label="Save Document">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-      <polyline points="17 21 17 13 7 13 7 21" />
-      <polyline points="7 3 7 8 15 8" />
-    </svg>
+    <Save />
   </button>
   <a id="github" href="https://github.com/spacebin-org" aria-label="Spacebin Github">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-      />
-    </svg>
+    <Octocat />
   </a>
   <a id="wiki" href="https://docs.spaceb.in" aria-label="Spacebin Documentation">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-    </svg>
+    <Book />
   </a>
 </header>
 
